@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Development</title>
+  <style>
+    html {
+      background-color: #0E0E0E;
+      font-family: helvetica;
+      width: 100;
+      height: 400%;
+    }
+    .First-Page {
+        width: 100%;
+        height: 100%;
+    }
+    .Second-Page {
+        width: 100%;
+        height: 100%;
+    }
+    .Third-Page {
+        width: 100%;
+        height: 100%;
+    }
+    .Fourth-Page {
+        width: 100%;
+        height: 100%;
+    }
+    .First-Page {
+      width: 100%;
+      position: relative;
+    }
+
+    .First-Page span {
+      font-size: 50px;
+      color: white;
+      display: block;
+      margin-left: 5%;
+      opacity: 0;
+      animation: fadeInMovement .55s ease-in forwards;
+    }
+
+    .First-Page h5 {
+      color: gray;
+      margin-left: 5%;
+      opacity: 0;
+      animation: fadeInMovement .55s ease-in forwards;
+    }
+
+    #IgottPush {
+      margin-top: 20%;
+    }
+
+    #ContactMeHomeScreenButton {
+      margin-left: 20%;
+      background: none;
+      border-color: teal;
+      border-style: solid;
+      color: teal;
+      padding: 8px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-left: 5%;
+      opacity: 0;
+      animation: fadeInMovement .60s ease-in forwards;
+    }
+
+    #ContactMeHomeScreenButton:hover {
+      background-color: #005555;
+      color: white;
+    }
+
+    @keyframes fadeInMovement {
+      from {
+        opacity: 0;
+        margin-left: 5%;
+      }
+
+      to {
+        opacity: 1;
+        margin-left: 20%
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    #pfpImage {
+      border: none;
+      border-radius: 50%;
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      right: 25%;
+      top: -8%;
+      opacity: 0;
+      right: 22%;
+      animation: imageAnim .55s ease-in forwards;
+    }
+
+    @keyframes imageAnim {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .Second-Page h1 {
+      text-align: center;
+      color: white;
+    }
+    @keyframes BoxMovement {
+      from {
+        margin-left: 5%;
+        opacity: 0;
+      }
+      to {
+        margin-left: 20%;
+        opacity: 1;
+      }
+    }
+
+    .BoxOne {
+      width: 300px;
+      height: 300px;
+      border: solid;
+      border-color: white;
+      color: white;
+      background-color: #575757;
+      text-align: center;
+      border-radius: 25px;
+      border-width: 1px;
+      margin-top: 8%;
+      opacity: 0;
+      margin-left: 5%;
+      animation: BoxMovement .55s ease-in forwards;
+    }
+
+    .BoxTwo {
+      width: 300px;
+      height: 300px;
+      border: solid;
+      border-color: white;
+      color: white;
+      background-color: #575757;
+      text-align: center;
+      border-radius: 25px;
+      border-width: 1px;
+      margin-top: 8%;
+      opacity: 0;
+      margin-left: 5%;
+      animation: imageAnim .55s ease-in forwards;
+    }
+
+    .BoxThree {
+      width: 300px;
+      height: 300px;
+      border: solid;
+      border-color: white;
+      color: white;
+      background-color: #575757;
+      text-align: center;
+      border-radius: 25px;
+      border-width: 1px;
+      margin-top: 8%;
+      opacity: 0;
+      margin-left: 5%;
+      animation: imageAnim .55s ease-in forwards;
+    }
+
+    .SpecializationBoxes {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      min-width: 300px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .SpecializationBoxes h3 {
+      margin-top: 30%;
+    }
+
+    .Third-Page h1 {
+      color: white;
+      text-align: center;
+    }
+
+    .Fourth-Page h1 {
+      color: white;
+      text-align: center;
+    }
+
+    .Fourth-Page h4 {
+      color: white;
+      font-size: 50px;
+      margin-left: 10%;
+      margin-top: 10%;
+      position: relative;
+      animation: TextMovement .4s ease-in forwards;
+    }
+
+    @keyframes TextMovement {
+      from {
+        opacity: 0;
+        margin-left: 5%;
+      }
+
+      to {
+        opacity: 1;
+        margin-left: 17%
+      }
+    }
+
+    .OrderBox {
+      background-color: #1B1A1A;
+      width: 20%;
+      height: 50%;
+      border-radius: 15px;
+      color: white;
+      position: absolute;
+      right: 20%;
+      top: 325%;
+            
+    }
+
+    .OrderBox input {
+      width: 80%;
+      margin-left: 10%;
+      height: 27px;
+      background-color: #a2aeb3;
+      border: None;
+      border-radius: 5px;
+    }
+
+    .OrderBox label {
+      margin-top: 40%;
+      font-size: 18px;
+      margin-left: 10%;
+      margin-top: 20%;
+    }
+
+    #orderInput {
+      height: 90px;
+    }
+
+    #submitButton {
+      width: 80%;
+      height: 35px;
+      margin-left: 10%;
+      cursor: pointer;
+      background-color: #0f90c3;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 550;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="First-Page">
+    <span id="IgottPush">Hi,</span>
+    <span>I'm Dark.</span>
+    <span>A bot and web developer.</span>
+    <img id="pfpImage" src="Screenshot 2024-08-12 011919.png">
+    <h5>Front End Developer / Bot Developer</h5>
+    <button onclick="location.href='.Fourth-Page'" id="ContactMeHomeScreenButton">Contact Me</button>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="Second-Page">
+    <h1>Specialization</h1>
+    <div class="SpecializationBoxes">
+      <div class="BoxOne">
+        <h3>Web Development</h3>
+        <p>A custom interactive site suited <br>to your needs to boost <br>your business's status.</p> <br>
+        <h5>Languages: HTML, CSS, Javascript</h5>
+      </div>
+      <div class="BoxTwo">
+        <h3>Discord Development</h3>
+        <p>Create a custom discord bot with<br> features ranging from banning <br>users to roblox API linking <br>and
+          management.</p> <br>
+        <h5>Languages: Python(Discord.py library)</h5>
+      </div>
+      <div class="BoxThree">
+        <h3>Roblox Development</h3>
+        <p>A high quality roblox animation <br>to boost your games <br>player experience.</p> <br>
+        <h5>Languages: None</h5>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="Third-Page">
+    <h1>Projects</h1>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="Fourth-Page">
+    <h1>Contact</h1>
+    <h4>Got a development order?<br><br> Contact me today!</h4>
+    <div class="OrderBox">
+      <h1>Order</h1>
+      <label for="nameInput">Name</label> <br>
+      <input id="nameInput" , type="text" , required> <br> <br>
+      <label for="discorduserInput">Discord User</label> <br>
+      <input id="discorduserInput" , required, type="text"> <br> <br>
+      <label for="OrderTopicInput">Order Topic</label> <br>
+      <input id="OrderTopicInput" , required, placeholder="Bot, website etc..." , type="text"> <br> <br>
+      <label for="orderInput">Order</label> <br>
+      <input id="orderInput" , type="text" , required> <br> <br>
+      <button id="submitButton">Submit Order</button>
+    </div>
+  </div>
+
+
+  <script src="Portfolio.js"></script>
+</body>
+
+</html>
